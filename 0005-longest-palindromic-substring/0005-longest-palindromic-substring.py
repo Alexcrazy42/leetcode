@@ -11,10 +11,7 @@ class Solution:
         for i in range(LEN):
             dp[i][i] = True
             
-        """
-        2 character string -> check if they are palindromes
-        start at i and end at i+1
-        """
+        
         for i in range(LEN - 1):
             if s[i] == s[i + 1]:
                 dp[i][i+1] = True
@@ -45,26 +42,4 @@ class Solution:
         
         
         
-        
-        
-        
-        """
-        if len(s) == 1: return s
-
-        arrayPalindromes = []
-        for i in range(len(s)):
-            string = ""
-            for j in range(len(s[i:])):
-                string += s[i:][j]
-                if string == string[::-1]: 
-                    arrayPalindromes.append(string)
-
-        maxLen = 0 
-        maxP = ""
-        for i in arrayPalindromes:
-            if len(i) > maxLen:
-                maxLen = len(i)
-                maxP = i 
-        return maxP
-        """
 
